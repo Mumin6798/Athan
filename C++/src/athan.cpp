@@ -43,7 +43,7 @@ double Athan::MidnightMethod(){
 
 int Athan::getIsha(ExtremeDayMethods ExtremeMethod, double IshaAngle){
     //Returns Isha in seconds form 00:00.
-	double isha;
+	double isha = 0.0;
 	//Check if Umm al-Qura (Makkah) method has been chosen and then it adds 90 minutes to maghrib hour angle if true.
 	if(IshaAngle == 0.0){
 		isha = dhuhr + hourangleofsunset + 1.5;
@@ -88,7 +88,7 @@ int Athan::getSunrise(){
 int Athan::getFajr(ExtremeDayMethods ExtremeMethod, double FajrAngle){
     //Returns Fajr in seconds form 00:00.
 	double a = getHourAngle(FajrAngle);
-	double fajr;
+	double fajr = 0.0;
 	//Checks the smaller time between the method and the extreme method.
     switch(ExtremeMethod){
         case One_Seventh_Night:
